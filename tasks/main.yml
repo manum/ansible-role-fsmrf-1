@@ -45,13 +45,13 @@
        accept_hostkey=yes
        force=yes
 
-- name: check out drachtio freeswitch modules
-  git: repo=https://github.com/davehorton/drachtio-freeswitch-modules.git
-       dest=/usr/local/src/drachtio-freeswitch-modules
-       version=master
-       depth=50
-       accept_hostkey=yes
-       force=yes
+       #- name: check out drachtio freeswitch modules
+       #  git: repo=https://github.com/manum/freeswitch-modules.git
+       #dest=/usr/local/src/drachtio-freeswitch-modules
+       #version=master
+       #depth=50
+       #accept_hostkey=yes
+       #force=no
 
 - name: copy mod_audio_fork into place
   shell: cp -r /usr/local/src/drachtio-freeswitch-modules/modules/mod_audio_fork {{freeswitch_sources_path}}/src/mod/applications/mod_audio_fork
